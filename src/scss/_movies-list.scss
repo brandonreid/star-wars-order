@@ -1,0 +1,57 @@
+.movie-items {
+  text-align: center;
+  max-width: 28em;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  &:before {
+    content: '';
+    border-left: 2px solid $blue;
+    position: absolute;
+    top: 1em;
+    left: 80px;
+    bottom: 1em;
+    z-index: -1;
+  }
+}
+
+.movie-item {
+  position: relative;
+  padding-left: 44px;
+  & + & {
+    margin-top: 0.5em;
+  }
+}
+.movie-number {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: 3px dashed rgba(white, 0.3);
+  border-radius: 50%;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+}
+.movie-img {
+  border: 3px solid $blue;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  img {
+    max-width: 100%;
+  }
+}
+.movie-title {
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}

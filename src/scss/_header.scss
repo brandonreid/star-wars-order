@@ -1,0 +1,41 @@
+header {
+  text-align: center;
+  
+  h1 {
+    font-size: 6em;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 2rem 1rem 3rem;
+    span {
+      font-size: 0.75em;
+      display: block;
+    }
+  }
+  
+  .big-btn-group {
+    display: inline-block;
+    margin-bottom: 3em;
+    button {
+      font-size: 2em;
+      background-color: transparent;
+      color: $blue;
+      border: 4px solid $blue;
+      padding: 0.125em 0.5em;
+      &.active {
+        background-color: $blue;
+        color: $black;
+      }
+      &:first-child {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+      & + button {
+        margin-left: -0.2em;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+    }
+  }
+
+}

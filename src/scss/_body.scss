@@ -1,0 +1,16 @@
+body {
+  background-color: $black;
+  font-size: 18px;
+  font-family: $fontbase;
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+}
+
+#space {
+  background: $black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
