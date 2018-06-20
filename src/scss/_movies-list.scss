@@ -1,25 +1,42 @@
+.main-container {
+  .release-date {
+    display: none;
+  }
+  &.release-date-mode {
+    .chronological {
+      display: none;
+    }
+    .release-date {
+      display: block;
+    }
+  }
+}
+
 .movie-items {
   text-align: center;
-  max-width: 28em;
-  margin: 0 auto;
+  max-width: 27.78em;
+  margin: 0 auto 4em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
   position: relative;
   z-index: 10;
   &:before {
     content: '';
-    border-left: 2px solid $blue;
+    border-left: 3px solid $blue;
     position: absolute;
     top: 1em;
-    left: 80px;
+    left: 76px;
     bottom: 1em;
     z-index: -1;
   }
 }
 
 .movie-item {
+  text-align: left;
   position: relative;
-  padding-left: 44px;
+  padding-left: 50px;
   & + & {
-    margin-top: 0.5em;
+    margin-top: 2em;
   }
 }
 .movie-number {
@@ -31,14 +48,24 @@
   line-height: 35px;
   width: 35px;
   height: 35px;
-  margin-right: 0.5em;
+  margin: 9px 0 0;
   display: inline-block;
   vertical-align: middle;
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-30px);
+  .saga-animated & {
+    font-size: 0.9em;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    left: 5px;
+    transform: translateY(-25px)
+  }
 }
 .movie-img {
-  border: 3px solid $blue;
+  border: 3px solid red;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -48,10 +75,47 @@
   img {
     max-width: 100%;
   }
+  .saga-1 & {
+    border-color: $blue;
+  }
+  .saga-2 & {
+    border-color: $orange;
+  }
+  .saga-3 & {
+    border-color: $green;
+  }
+  .saga-story & {
+    border-color: $purple;
+  }
+  .saga-animated & {
+    border-color: $grey;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+  }
 }
 .movie-title {
   color: white;
   display: inline-block;
   vertical-align: middle;
   margin-left: 1rem;
+  max-width: calc(100% - 4.5em);
+  h2 {
+    margin: 0;
+  }
+  p {
+    font-size: 0.75em;
+    margin: 0.25em 0 0;
+    opacity: 0.7;
+  }
+  .saga-animated & {
+    opacity: 0.7;
+    h2 {
+      font-size: 1.125em;
+      font-weight: normal;
+    }
+    p {
+      font-size: 0.7em;
+    }
+  }
 }

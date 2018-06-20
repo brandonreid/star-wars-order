@@ -1,15 +1,36 @@
 header {
   text-align: center;
+
+  .star-wars-logo {
+    width: 26em;
+    max-width: 90%;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    path,
+    polygon {
+      fill-rule:evenodd;
+      clip-rule:evenodd;
+      fill: $star-wars-yellow;
+    }
+  }
   
   h1 {
-    font-size: 6em;
+    font-size: 1.5em;
+    font-weight: normal;
     color: white;
     text-transform: uppercase;
+    letter-spacing: 0.25em;
     margin: 0;
-    padding: 2rem 1rem 3rem;
+    padding: 0 1rem 3rem;
     span {
-      font-size: 0.75em;
-      display: block;
+      font-size: 0em;
+      width: 0px;
+      height: 0px;
+      display: inline-block;
+      visibility: hidden;
+    }
+    @media (min-width: 520px) {
+      font-size: 2.75em;
     }
   }
   
@@ -17,13 +38,18 @@ header {
     display: inline-block;
     margin-bottom: 3em;
     button {
-      font-size: 2em;
       background-color: transparent;
-      color: $blue;
-      border: 4px solid $blue;
-      padding: 0.125em 0.5em;
+      color: $star-wars-yellow;
+      font-weight: bold;
+      border: 2px solid $star-wars-yellow;
+      padding: 0.25em 0.75em 0.25em 0.8em;
+      outline: none;
+      &:hover {
+        background-color: rgba($star-wars-yellow, 0.2);
+        cursor: pointer;
+      }
       &.active {
-        background-color: $blue;
+        background-color: $star-wars-yellow;
         color: $black;
       }
       &:first-child {
@@ -31,7 +57,7 @@ header {
         border-bottom-left-radius: 6px;
       }
       & + button {
-        margin-left: -0.2em;
+        margin-left: -0.35em;
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
       }

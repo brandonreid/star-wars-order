@@ -10,8 +10,8 @@ $('document').ready(function() {
   console.log('Thanks WillemCrnlssn on Codepen for the canvas stars bg! https://codepen.io/WillemCrnlssn/pen/JgFGs');
   
   // Calculate the screen size
-  screenH = $(window).height();
-  screenW = $(window).width();
+  screenH = $(window).height() * 2;
+  screenW = $(window).width() * 2;
   
   // Get the canvas
   canvas = $('#space');
@@ -36,6 +36,19 @@ $('document').ready(function() {
   }
   
   setInterval(animate, 1000 / fps);
+
+  // ------------ My Stuff ------------
+  $('#chronBtn').click(function() {
+    $('#chronBtn').addClass('active');
+    $('#rdBtn').removeClass('active');
+    $('.main-container').removeClass('release-date-mode');
+  });
+
+  $('#rdBtn').on('click', function() {
+    $('#rdBtn').addClass('active');
+    $('#chronBtn').removeClass('active');
+    $('.main-container').addClass('release-date-mode');
+  });
 });
 
 /**
