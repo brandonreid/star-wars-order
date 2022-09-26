@@ -7,8 +7,7 @@ Check it out at [starwarsorder.com](http://starwarsorder.com/)
 
 All we're doing here is compiling sass and deving on the index.html old school style.
 
-Run `npm run watch-sass` to develop.
-Run `npm run build-css` to compile the final styles file.
+Run `npm run sass` to develop.
 
 ## Deploy
 

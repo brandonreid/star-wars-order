@@ -55,7 +55,8 @@
   left: 0;
   top: 50%;
   transform: translateY(-30px);
-  .saga-animated & {
+  .saga-animated &,
+  .saga-live-action & {
     font-size: 0.9em;
     line-height: 25px;
     width: 25px;
@@ -87,11 +88,15 @@
   .saga-story & {
     border-color: $purple;
   }
-  .saga-animated & {
+  .saga-animated &,
+  .saga-live-action & {
     border-color: $grey;
     width: 40px;
     height: 40px;
     margin-left: 5px;
+  }
+  .saga-live-action & {
+    border-color: $purple-grey;
   }
 }
 .movie-title {
@@ -108,7 +113,8 @@
     margin: 0.25em 0 0;
     opacity: 0.7;
   }
-  .saga-animated & {
+  .saga-animated &,
+  .saga-live-action & {
     opacity: 0.7;
     h2 {
       font-size: 1.125em;
@@ -116,6 +122,11 @@
     }
     p {
       font-size: 0.7em;
+    }
+  }
+  .saga-live-action & {
+    h2 {
+      font-weight: bold;
     }
   }
 }
